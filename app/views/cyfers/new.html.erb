@@ -1,0 +1,12 @@
+<%= form_for(@cyfer) do |f| %>
+      <h3>グループ情報を編集する</h3>
+      <div>
+        <%= f.label :name, :Name, class: "control-label" %>
+        <%= f.text_field :name, placeholder: "サイファー名", class: "form-control" %>
+      </div>
+      <div>
+        <%= f.label :detail, :Detail, class: "control-label" %>
+        <%= f.text_area :detail, placeholder: "サイファーの紹介", size: "30x10", class: "form-control" %>
+      </div>
+      <%= f.submit "送信", class: "btn btn-primary withripple" %>
+    <% end %>
