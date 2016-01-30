@@ -6,9 +6,8 @@ class CyfersController < ApplicationController
     @cyfer = Cyfer.new
   end
 
-  def create(create_params)
-    Cyfer.create
-    redirect_to :root and return
+  def create
+    Cyfer.create(create_params)
   end
 
   def edit
@@ -25,6 +24,6 @@ class CyfersController < ApplicationController
 
   private
   def create_params
-    params.require(:cyfer).permit(:detail).permit(:name)
+    params.require(:cyfer).permit(:detail, :name, :date_time, :place)
   end
 end

@@ -8,5 +8,13 @@
         <%= f.label :detail, :Detail, class: "control-label" %>
         <%= f.text_area :detail, placeholder: "サイファーの紹介", size: "30x10", class: "form-control" %>
       </div>
+      <div>
+        <%= f.label :place, :Place, class: "control-label" %>
+        <%= f.text_field :place, placeholder: "開催場所", class: "form-control" %>
+      </div>
+      <div>
+        <%= f.label :date_time, :Date_Time, class: "control-label" %>
+        <%= f.text_field :date_time, placeholder: "開催日時", class: "form-control" %>
+      </div>
       <%= f.submit "送信", class: "btn btn-primary withripple" %>
     <% end %>
