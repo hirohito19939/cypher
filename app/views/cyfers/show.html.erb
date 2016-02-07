@@ -1,5 +1,5 @@
 <%= @cyfer.name %>
 
-<%= form_for(@key) do |f| %>
-      <%= submit_tag("参加する") %>
+<%= form_tag(cyfer_keys_path, method: :post) do %>
+      <%= submit_tag("回答する") %>
       <% end %>
