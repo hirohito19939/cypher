@@ -1,8 +1,14 @@
-  <p>test</p>
-  <% if user_signed_in? %>
-  <%= link_to 'サインアウト', "/users/sign_out", method: :delete %>
-  <%= link_to 'マイページ', user_path(current_user) %>
-  <% else %>
-  <%= link_to 'サインイン', user_session_path %>
-  <%= link_to '新規登録', new_user_registration_path %>
-  <% end %>
+<header>
+  <div class="heading clearfix">
+  <h1 class="title">Cypher</h1>
+    <div class="nav-menu">
+    <% if user_signed_in? %>
+    <%= link_to 'サインアウト', "/users/sign_out", method: :delete %>
+    <%= link_to 'マイページ', user_path(current_user) %>
+    <% else %>
+    <%= link_to 'サインイン', user_session_path %>
+    <%= link_to '新規登録', new_user_registration_path %>
+    <% end %>
+    </div>
+  </div>
+</header>

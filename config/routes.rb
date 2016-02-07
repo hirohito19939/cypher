@@ -1,10 +1,13 @@
 Rails.application.routes.draw do
   devise_for :users
   resources :users, only: [:show, :edit, :update] #ユーザーページの表示
-  resources :cyfers, only: [:new, :create, :edit, :update, :show, :destroy] #サイファーの作成、保存、更新、閲覧
-  resources :comments, only: [:new, :create, :edit, :update,
+  resources :cyfers, only: [:new, :create, :edit, :update, :show, :destroy] do #サイファーの作成、保存、更新、閲覧
+    resources :comments, only: [:new, :create, :edit, :update,
    :destroy]
+    resources :keys, only: [:new, :create, :destroy]
+ end
   root 'cyfers#index'
+end
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
@@ -59,4 +62,3 @@ Rails.application.routes.draw do
   #     # (app/controllers/admin/products_controller.rb)
   #     resources :products
   #   end
-end

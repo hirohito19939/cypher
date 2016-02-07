@@ -1,5 +1,6 @@
 class CyfersController < ApplicationController
   def index
+    @cyfers = Cyfer.all
   end
 
   def new
@@ -17,6 +18,8 @@ class CyfersController < ApplicationController
   end
 
   def show
+    @cyfer = Cyfer.find(params[:id])
+    @key = Keys.new
   end
 
   def destroy
@@ -24,6 +27,6 @@ class CyfersController < ApplicationController
 
   private
   def create_params
-    params.require(:cyfer).permit(:detail, :name, :date_time, :place)
+    params.require(:cyfer).permit(:detail, :name, :date_time, :place, :avatar)
   end
 end

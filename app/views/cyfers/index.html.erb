@@ -1,0 +1,21 @@
+<div class="box">
+<div class="container">
+  <center><p class="shadow">サイファー一覧</p></center>
+<ul class='clearfix'>
+  <% @cyfers.each do |cyfer| %>
+    <li class="col">
+      <h3>
+        <center>
+        <div class="detail">
+        <p><%= cyfer.name %></p>
+        </div>
+        <div><%= image_tag cyfer.avatar, :size => "250x200" %></div>
+        <p><%= cyfer.detail %></p>
+        <p><a href="/cyfers/<%= cyfer.id %>">サイファーの詳細</a></p>
+      </center>
+      </h3>
+    </li>
+  <% end %>
+</ul>
+<div>
+</div>
