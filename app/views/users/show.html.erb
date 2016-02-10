@@ -1,18 +1,18 @@
 <div>
-  <div>
-    <h2><%= @user.mc_name %>のマイページ</h2>
+  <div class="block">
+    <center><h2><%= @user.mc_name %>のマイページ</h2>
     <% if current_user && current_user.id == @user.id %>
       <%= link_to "プロフィール編集", edit_user_path(current_user), {:class => "btn btn-primary withripple" }%>
-    <% end %>
+      <% end %></center>
   </div>
-  <div>
+  <div class="block">
     <h3>戦歴</h3>
     <%= @user.history %>
   </div>
-  <div>
+  <div class="block">
     <h3>Discography（音源紹介）</h3>
     <%= @user.discography %>
   </div>
-  <div>
+  <div class="block">
     <h3>自己紹介</h3>
   </div>

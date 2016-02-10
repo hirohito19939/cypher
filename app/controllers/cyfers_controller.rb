@@ -20,6 +20,7 @@ class CyfersController < ApplicationController
   def show
     @cyfer = Cyfer.find(params[:id])
     @key = Key.new
+    @comment = Comment.new
   end
 
   def destroy
