@@ -4,8 +4,8 @@ Rails.application.routes.draw do
   resources :cyfers, only: [:new, :create, :edit, :update, :show, :destroy] do #サイファーの作成、保存、更新、閲覧
     resources :comments, only: [:new, :create, :edit, :update,
    :destroy]
-    resources :keys, only: [:new, :create, :destroy]
  end
+  resources :keys, only: [:new, :create, :destroy]
   root 'cyfers#index'
 end
   # The priority is based upon order of creation: first created -> highest priority.

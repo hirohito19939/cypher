@@ -97,28 +97,64 @@ h3{
 ul{
   margin: auto 0;
   list-style: none;
+  padding-left: 0;
 }
 
+@media only screen and (min-device-width: 760px)
+    and (max-device-width: 1000px){
 .box{
-  width: 1000px;
-  height: 1200px;
+  max-width: 1000px;
+  height: ;
+  border-color: black;
+  box-shadow: 7px 7px 7px 7px #666666;
+  background-color: black;
+  margin: 0 auto;
+  padding: 5px;
+}
+}
+
+@media only screen and (min-device-width: 480px)
+    and (max-device-width: 760px){
+.box{
+  max-width: 760px;
+  height: ;
   border-color: ;
   box-shadow: 7px 7px 7px 7px #666666;
   background-color: white;
   margin: 0 auto;
+  padding: 5px;
 }
+}
+
+@media only screen and (min-device-width: 320px)
+    and (max-device-width: 480px){
+.box{
+  max-width: 480px;
+  height: ;
+  border-color: ;
+  box-shadow: 7px 7px 7px 7px #666666;
+  background-color: white;
+  margin: 0 auto;
+  padding: 5px;
+}
+}
+
+
 
 .shadow{
   box-shadow: 1px 1px 1px 1px #666666;
 }
 
+/*@media only screen and (min-device-width: 760px)
+    and (max-device-width: 1000px){*/
 .heading{
-  width: 1000px;
+  max-width: 1000px;
   margin: 0 auto;
   box-shadow: 7px 7px 7px 7px #666666;
-  background-color: white;
+  background-color:;
   margin-bottom: 50px;
 }
+
 
 .title{
   float: left;

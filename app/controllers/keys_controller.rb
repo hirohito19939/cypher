@@ -12,6 +12,6 @@ class KeysController < ApplicationController
 
   private
   def create_params
-  params.permit(:cyfer_id).merge(users_id: current_user.id)
+  params.permit(:cyfer_id).merge(user_id: current_user.id)
 end
 end

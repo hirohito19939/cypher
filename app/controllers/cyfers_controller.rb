@@ -21,6 +21,8 @@ class CyfersController < ApplicationController
     @cyfer = Cyfer.find(params[:id])
     @key = Key.new
     @comment = Comment.new
+    @keys = Key.all
+    @comments = @cyfer.comments.order('id DESC').limit(20)
   end
 
   def destroy
