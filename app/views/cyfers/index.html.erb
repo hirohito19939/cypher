@@ -1,21 +1,16 @@
-<div class="container">
-  <center><p class="shadow">サイファー一覧</p></center>
+<center><h2>サイファー一覧</h2></center>
+<hr>
+<div class="clearfix">
 <ul>
-  <div class="center clearfix">
-  <% @cyfers.each do |cyfer| %>
-    <li class="col">
-      <h3>
-        <center>
-        <div class="detail">
-        <p><%= cyfer.name %></p>
-        </div>
-        <div><%= image_tag cyfer.avatar, :size => "250x200" %></div>
-        <p><%= cyfer.detail %></p>
-        <p><a href="/cyfers/<%= cyfer.id %>">サイファーの詳細</a></p>
-      </center>
-      </h3>
-    </li>
-  <% end %>
-  </div>
+      <% @cyfers.each do |cyfer| %>
+        <li class="cyferbox">
+          <center>
+            <%= image_tag cyfer.avatar, :size => "100pxx300px" %>
+            </center>
+            <p><a href="/cyfers/<%= cyfer.id %>">サイファーの詳細</a></p>
+            <h3 class="cyfer-name"><%= cyfer.name %></h3>
+            <br>
+        </li>
+      <% end %>
+    </div>
 </ul>
-<div>
