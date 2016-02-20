@@ -1,6 +1,8 @@
 <header>
   <div class="heading clearfix">
-  <h1 class="title">Cypher</h1>
+  <%= link_to root_path, :class => 'navbar-brand' do %>
+        <%= image_tag 'warap.jpg' %>
+      <% end %>
     <div class="nav-menu">
     <% if user_signed_in? %>
     <%= link_to 'サインアウト', "/users/sign_out", method: :delete %>
@@ -12,5 +14,4 @@
     <% end %>
     </div>
   </div>
-  <hr>
 </header>

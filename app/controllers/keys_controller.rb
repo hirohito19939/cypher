@@ -9,8 +9,7 @@ class KeysController < ApplicationController
 
   def destroy
   @key = Key.where(cyfer_id: params[:id], user_id: current_user.id)
-  binding.pry
-  @key.destroy
+  @key.first.destroy
   end
 
   private

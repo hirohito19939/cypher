@@ -1,58 +1,64 @@
- <div class="cyfer-block">
-    <center><h2><%= @cyfer.name %><br>
-    <%= image_tag @cyfer.avatar, :size => "300x200" %></h2>
+<div class="cyfer-block info">
+ <center><h2><span><%= @cyfer.name %></span></h2><br>
+    <%= image_tag @cyfer.avatar, :size => "300x200" %>
     </center>
   </div>
 
-  <div class="block">
-    <h3>基本情報</h3>
-    <hr>
-    開催場所:<b><%= @cyfer.place %></b><br>
-    開催日時:<b><%= @cyfer.date_time %></b>
+<div class="clearfix">
+  <div class="kihon-block info">
+    <h3 class="fukidashi">基本情報</h3>
+    <p>開催場所:<b><%= @cyfer.place %></b><br>
+      開催日時:<b><%= @cyfer.date_time %></b></p>
   </div>
 
-  <div class="block">
-    <h3>サイファーの紹介</h3>
-    <%= @cyfer.detail %>
+  <div class="detail-block info">
+    <h3 class="fukidashi">サイファーの紹介</h3>
+    <p><%= @cyfer.detail %></p>
   </div>
 
-  <div class="block">
-    <h3>参加予定MC</h3>
-    <% @cyfer.users.each do |user| %>
+  <div class="sanka-yotei-block info">
+    <h3 class="fukidashi">参加予定MC</h3>
+    <p><% @cyfer.users.each do |user| %>
     <a href="/users/<%= user.id %>"><%= user.mc_name %></a><br>
-    <% end %>
+    <% end %></p>
+  </div>
+  </div>
+  <br>
+
+<div class="sanka-block">
+<center>
+  <% if @keys.where(cyfer_id:params[:id], user_id:current_user.id).present? %>
+  <%= form_tag(key_path, method: :delete) do %>
+  <%= submit_tag("不参加に変更") %>
+  <% end %>
+  <% else %>
+  <%= form_tag(keys_path(@cyfer.id), method: :post) do %>
+  <%= submit_tag("サイファーに参加する") %>
+  <% end %>
+  <% end %>
+  </center>
+  <hr>
   </div>
 
-<% if @keys.where(cyfer_id:params[:id], user_id:current_user.id).present? %>
-<div class="block">
-<%= form_tag(key_path, method: :delete) do %>
-<%= submit_tag("不参加に変更") %>
-<% end %>
-  </div>
-<% else %>
-  <div class="block">
-<%= form_tag(keys_path(@cyfer.id), method: :post) do %>
-<%= submit_tag("回答する") %>
-<% end %>
-<% end %>
-  </div>
-
-    <div class="block">
+    <div class="toukou-block">
     <center>
     <%= form_for [@cyfer, @comment] do |f| %>
           <div style="margin: 8px 0">
-            <%= f.text_area :comment, placeholder: '投稿内容', style: 'width: 80%;height: 100px;' %>
+            <%= f.text_area :comment, placeholder: '投稿内容', style: 'width: 80%;height: 100px;', class: "toukou-form" %>
           </div>
-          <%= button_tag type: "submit", class: "btn btn--block" do %>投稿する<i class="icon-arrow-right"></i>
+          <%= button_tag type: "submit", class: "button button2" do %>投稿する<i class="icon-arrow-right"></i>
           <% end %>
 <% end %>
   </center>
+  <hr class="white">
   </div>
 
-  <div class="block">
+  <div class="comment-block">
+    <p class="fukidashi">コメント一覧</p>
   <% @comments.each do |comment| %>
+  <p class="each-comment">
     <a href="/users/<%= comment.user.id %>"><%= comment.user.mc_name %></a> 投稿日時:<%= comment.created_at %><br>
-  <%= comment.comment %>
-  <hr>
+    <%= comment.comment %><br>
+  </p>
   <% end %>
   </div>

@@ -10,5 +10,6 @@ class ApplicationController < ActionController::Base
     devise_parameter_sanitizer.for(:sign_up) << :profile
     devise_parameter_sanitizer.for(:sign_up) << :discography
     devise_parameter_sanitizer.for(:sign_up) << :history
+    devise_parameter_sanitizer.for(:sign_up).push(:avatar)
   end
 end

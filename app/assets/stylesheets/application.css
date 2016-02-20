@@ -16,7 +16,8 @@
 
 .heading{
   background-color:;
-  margin-bottom: 50px;
+  box-shadow: 7px 7px 7px 7px #666666;
+  margin-bottom: 15px;
 }
 
 .cyferbox{
@@ -39,34 +40,79 @@ img{
   margin-bottom: 5px;
 }
 
-/*@media screen and (min-width:480px) and (max-width: 760px) {
-  .cyferbox{
-  max-width: 300px;
-  height: 250px;
-  float: left;
-  margin: 10px;
-  margin-bottom: 30px;
-  box-shadow: 0.1px 0.1px 0.1px 0.1px #666666;
-  border-radius: 20px;
-  background-color: white;
-  }
-}*/
+.box{
+  width:;
+  height: ;
+  border-color: black;
+  /*box-shadow: 7px 7px 7px 7px #666666;*/
+  background-color: #f2f4f8;;
+  margin:;
+  padding:;
+}
+
+.cyfer-list ul li{
+  /*box-shadow: 7px 7px 7px 7px #666666;*/
+}
 
 @media screen and (min-width:760px) {
-    .cyferbox{
-  width: 300px;
-  height: 300px;
-  float: left;
-  margin: 10px;
-  margin-bottom: 30px;
-  box-shadow: 0.1px 0.1px 0.1px 0.1px #666666;
-  border-radius: 20px;
-  background-color: white;
-  }
+
+.kihon-block{
+  width:30%;
+  float:left;
+  margin-left:5%;
+}
+
+.detail-block{
+  width:30%;
+  float:left;
+}
+
+.sanka-yotei-block{
+  width:30%;
+  float:left;
+}
+
+.cyfer-list ul{
+  margin-left:-20px;
+  overflow:hidden;
+  background-color:;
+}
+
+.cyfer-list ul li{
+  list-style-type:none;
+  float:left;
+  margin-left: 25px;
+  margin-bottom:20px;
+  text-align:center;
+  box-shadow: 3px 3px 3px 3px #666666;
+}
+
+ul.col li {
+  width: 30%;}
+}
+}
+
+/*以下、レスポンシブ以外のcssコード*/
+/*以下、レスポンシブ以外のcssコード*/
+/*以下、レスポンシブ以外のcssコード*/
+
+.box{
+  width: 95%;
+  height: ;
+  border-color: black;
+  box-shadow: 7px 7px 7px 7px #666666;
+  background-color: #f2f4f8;;
+  margin: 0 auto;
+  padding:;
 }
 
 .title{
   float: left;
+  margin-bottom: 0px;
+}
+
+h1{
+  margin-bottom: 0px;
 }
 
 .nav-menu{
@@ -99,10 +145,337 @@ a{
   margin: 0;
 }
 
-p{
+/*p{
   margin: 0;
-}
+}*/
 
 .center{
   margin:auto 0;
+}
+
+.info p{
+  padding: 1em;
+  border: 3px solid #ccc;
+  border-radius: 3em .7em 2em .7em/.7em 2em .7em 3em;
+  box-shadow: 0.5px 0.5px 0.5px 0.5px #666666;
+  background-color: white;
+}
+
+.fukidashi {
+  position: relative;
+  padding: .5em .75em;
+  background-color: #f6f6f6;
+}
+
+.fukidashi {
+  position: relative;
+  padding: .5em .75em;
+  background-color: #f0f0f0;
+  border-radius: 6px;
+  box-shadow: 7px 7px 7px 7px #666666;
+}
+.fukidashi::after {
+  position: absolute;
+  top: 100%;
+  left: 30px;
+  content: '';
+  width: 0;
+  height: 0;
+  border: 10px solid transparent;
+  border-top: 15px solid #f0f0f0;
+}
+
+.cyfer-list h3 {
+  position: relative;
+  padding: 1em 4em 1em 1em;
+  -webkit-background: linear-gradient(-155deg, rgba(0, 0, 0, 0) 1.5em, #f6f6f6 0%);
+  background: linear-gradient(-155deg, rgba(0, 0, 0, 0) 1.5em, #f6f6f6 0%);
+  border-radius: 6px;
+}
+.cyfer-list h3::after {
+  position: absolute;
+  top: 0;
+  right: 0;
+  content: '';
+  width: 1.65507em;
+  height: 3.5493em;
+  background: -webkit-linear-gradient(to left bottom, rgba(0, 0, 0, 0) 50%, rgba(0, 0, 0, .1) 0%, rgba(0, 0, 0, .2));
+  background: linear-gradient(to left bottom, rgba(0, 0, 0, 0) 50%, rgba(0, 0, 0, .1) 0%, rgba(0, 0, 0, .2));
+  border-bottom-left-radius: 6px;
+  box-shadow: -.2em .2em .3em -.1em rgba(0, 0, 0, .15);
+  -webkit-transform: translateY(-1.89424em) rotate(-40deg);
+  transform: translateY(-1.89424em) rotate(-40deg);
+  -webkit-transform-origin: bottom right;
+  transform-origin: bottom right;
+}
+
+.cyferbox h3 {
+  padding-bottom: .5em;
+  border-bottom: 1px solid #ccc;
+}
+.cyferbox h3 span {
+  display: block;
+  margin-bottom: .2em;
+  color: #aaa;
+  font-size: .9em;
+}
+
+.cyfer-block h2 {
+  padding: .75em 1em;
+  border: 1px solid #ccc;
+  border-top: 3px solid #3498db;
+  background: -webkit-linear-gradient(top, #fff 0%, #f0f0f0 100%);
+  background: linear-gradient(to bottom, #fff 0%, #f0f0f0 100%);
+  box-shadow: 0 -1px 0 rgba(255, 255, 255, 1) inset;
+}
+
+/*ボタンのCSS*/
+
+.button {
+  display: inline-block;
+  width: 200px;
+  height: 54px;
+  text-align: center;
+  text-decoration: none;
+  line-height: 54px;
+  outline: none;
+    box-shadow: 7px 7px 7px 7px #666666;
+}
+.button::before,
+.button::after {
+  position: absolute;
+  z-index: -1;
+  display: block;
+  content: '';
+}
+.button,
+.button::before,
+.button::after {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  -webkit-transition: all .3s;
+  transition: all .3s;
+}
+
+.button1 {
+  position: relative;
+  z-index: 2;
+  background-color: #BBBBBB;
+  border: 1px solid #333;
+  color: #333;
+  line-height: 50px;
+  overflow: hidden;
+}
+.button1:hover {
+  color: #fff;
+}
+.button1::after {
+  top: -100%;
+  width: 100%;
+  height: 100%;
+}
+.button1:hover::after {
+  top: 0;
+  background-color: #333;
+}
+
+.button2 {
+  position: relative;
+  z-index: 2;
+  background-color: #333;
+  border: 2px solid #333;
+  color: #fff;
+  line-height: 50px;
+  margin-bottom:30px;
+}
+.button2:hover {
+  background-color: #fff;
+  border-color: #59b1eb;
+  color: #59b1eb;
+}
+.button2::before,
+.button2::after {
+  left: 0;
+  width: 100%;
+  height: 50%;
+  background-color: #333;
+}
+.button2::before {
+  top: 0;
+}
+.button2::after {
+  bottom: 0;
+}
+.button2:hover::before,
+.button2:hover::after {
+  height: 0;
+  background-color: #59b1eb;
+}
+
+
+/*参加ボタン*/
+.sanka-block input {
+  display: inline-block;
+  width: 200px;
+  height: 54px;
+  text-align: center;
+  text-decoration: none;
+  line-height: 54px;
+  font-size: 16px;
+  outline: none;
+  box-shadow: 7px 7px 7px 7px #666666;
+  margin-bottom: 20px;
+}
+.sanka-block input::before,
+.sanka-block input::after {
+  position: absolute;
+  z-index: -1;
+  display: block;
+  content: '';
+}
+.sanka-block input,
+.sanka-block input::before,
+.sanka-block input::after {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  -webkit-transition: all .3s;
+  transition: all .3s;
+}
+
+.sanka-block input {
+  position: relative;
+  z-index: 2;
+  background-color: #BBBBBB;
+  border: 1px solid #333;
+  color: #333;
+  line-height: 50px;
+  overflow: hidden;
+}
+.sanka-block input:hover {
+  color: #fff;
+}
+.sanka-block input::after {
+  top: -100%;
+  width: 100%;
+  height: 100%;
+}
+.sanka-block input:hover::after {
+  top: 0;
+  background-color: #333;
+}
+
+/*投稿フォーム*/
+.toukou-form{
+  padding: 1em;
+  border: 3px solid #ccc;
+  border-radius: 3em .7em 2em .7em/.7em 2em .7em 3em;
+  box-shadow: 0.5px 0.5px 0.5px 0.5px #666666;
+  background-color: white;
+}
+
+/*コメント*/
+.each-comment{
+  padding: 1em;
+  border: 3px solid #ccc;
+  border-radius: 3em .7em 2em .7em/.7em 2em .7em 3em;
+  box-shadow: 0.5px 0.5px 0.5px 0.5px #666666;
+  background-color: white;
+  width: 70%;
+  margin: 0 auto;
+  margin-bottom: 5px;
+}
+
+.comment-block{
+  background-color:white;
+  box-shadow: 7px 7px 7px 7px #666666;
+  margin-bottom: 15px;
+  width:95%;
+  margin: 0 auto;
+  padding-bottom:10px;
+}
+
+/*登録フォーム*/
+.touroku-form{
+  width:80%;
+  margin:0 auto;
+}
+
+.touroku-form .form-control{
+  margin-top:10px;
+  padding: 1em;
+  border: 3px solid #ccc;
+  border-radius: 3em .7em 2em .7em/.7em 2em .7em 3em;
+  box-shadow: 0.5px 0.5px 0.5px 0.5px #666666;
+  background-color: white;
+  width: 70%;
+  margin: 0 auto;
+  margin-bottom: 5px;
+}
+
+.touroku-form textarea{
+  padding: 1em;
+  border: 3px solid #ccc;
+  border-radius: 3em .7em 2em .7em/.7em 2em .7em 3em;
+  box-shadow: 0.5px 0.5px 0.5px 0.5px #666666;
+  background-color: white;
+  width: 70%;
+  margin: 0 auto;
+  margin-bottom: 5px;
+}
+
+.touroku-form h3 {
+  position: relative;
+  padding-bottom: .5em;
+  border-bottom: 4px solid gray;
+}
+.touroku-form h3::after {
+  position: absolute;
+  bottom: -4px;
+  left: 0;
+  z-index: 2;
+  content: '';
+  width: 20%;
+  height: 4px;
+  background-color: red;
+}
+
+/*マイページ*/
+.mypage-show{
+  width:70%;
+  margin: 0 auto;
+}
+.mypage-show p{
+  padding: 1em;
+  border: 3px solid #ccc;
+  border-radius: 3em .7em 2em .7em/.7em 2em .7em 3em;
+  box-shadow: 0.5px 0.5px 0.5px 0.5px #666666;
+  background-color: white;
+}
+
+.mypage-show img{
+  width:50%;
+  margin: 0 auto;
+}
+
+/*ナビゲーションバー*/
+.nav-menu a {
+  background-color: red;
+  border: 2px solid #333;
+  color: #fff;
+  line-height: 50px;
+}
+.nav-menu a:hover {
+  background-color: #fff;
+  border-color: #59b1eb;
+  color: #59b1eb;
+}
+
+.heading img{
+  width:50%;
+}
+
+.toukou-block{
+  border-bottom: solid 5px white;
 }
