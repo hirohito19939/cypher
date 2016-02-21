@@ -1,0 +1,8 @@
+<div class="touroku-form">
+<%= form_for(@location) do |f| %>
+        <%= f.label :name, :Name, class: "fukidashi" %><br>
+        <br>
+        <%= f.text_field :address, placeholder: "サイファー名", class: "form-control" %>
+      <center><%= f.submit "送信", class: "button button2" %></center>
+    <% end %>
+  </div>

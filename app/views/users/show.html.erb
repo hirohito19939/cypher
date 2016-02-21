@@ -24,11 +24,10 @@
 
   <div class="block">
     <h3 class="fukidashi">参加予定サイファー</h3>
-    <br>
     <p>
     <% @user.cyfers.each do |cyfer| %>
     <a href="/cyfers/<%= cyfer.id %>"><%= cyfer.name %></a><br>
     <% end %>
-    <br>
   </p>
+  <br>
   </div>

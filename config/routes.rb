@@ -1,6 +1,8 @@
 Rails.application.routes.draw do
+  resources :locations
   devise_for :users
   resources :users, only: [:show, :edit, :update] #ユーザーページの表示
+  resources :maps, only: [:show, :new, :create]
   resources :cyfers, only: [:new, :create, :edit, :update, :show, :destroy] do #サイファーの作成、保存、更新、閲覧
     resources :comments, only: [:new, :create, :edit, :update,
    :destroy]
