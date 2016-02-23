@@ -5,10 +5,12 @@ class CyfersController < ApplicationController
 
   def new
     @cyfer = Cyfer.new
+    @cyfer.locations.build
   end
 
   def create
-    Cyfer.create(create_params)
+    cyfer = Cyfer.new(create_params)
+    cyfer.save
   end
 
   def edit
@@ -30,6 +32,6 @@ class CyfersController < ApplicationController
 
   private
   def create_params
-    params.require(:cyfer).permit(:detail, :name, :date_time, :place, :avatar)
+    params.require(:cyfer).permit(:detail, :name, :date_time, :place, :avatar, locations_attributes: [:address])
   end
 end

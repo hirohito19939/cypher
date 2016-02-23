@@ -1,5 +1,5 @@
 <div class="touroku-form">
-<%= form_for(@cyfer) do |f| %>
+<%= form_for [@cyfer] do |f| %>
       <h3>サイファーを登録</h3>
       <br>
       <div>
@@ -32,6 +32,11 @@
           <%= f.file_field :avatar %>
       </div>
       <br>
+
+      <%= f.fields_for :locations do |b| %>
+        <%= b.text_field :address, placeholder: "住所", class: "form-control" %>
+        <% end %>
+
       <center><%= f.submit "送信", class: "button button2" %></center>
     <% end %>
   </div>

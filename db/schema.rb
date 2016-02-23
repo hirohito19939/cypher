@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160221072914) do
+ActiveRecord::Schema.define(version: 20160221090512) do
 
   create_table "comments", force: :cascade do |t|
     t.integer  "user_id",    limit: 4
@@ -49,6 +49,7 @@ ActiveRecord::Schema.define(version: 20160221072914) do
     t.float    "longitude",   limit: 24
     t.datetime "created_at",              null: false
     t.datetime "updated_at",              null: false
+    t.integer  "cyfer_id",    limit: 4
   end
 
   create_table "users", force: :cascade do |t|
