@@ -1,6 +1,8 @@
 class CyfersController < ApplicationController
+  before_action :authenticate_user!, only: :show
+
   def index
-    @cyfers = Cyfer.all
+    @cyfers = Cyfer.page(params[:page]).per(9).order("created_at DESC")
   end
 
   def new
@@ -9,8 +11,8 @@ class CyfersController < ApplicationController
   end
 
   def create
-    cyfer = Cyfer.new(create_params)
-    cyfer.save
+    Cyfer.create(create_params)
+    redirect_to :back
   end
 
   def edit

@@ -1,21 +1,21 @@
-<div class="touroku-form">
+<div class="touroku-form lp">
 <%= form_for [@cyfer] do |f| %>
-      <h3>サイファーを登録</h3>
+      <h3>サイファーを登録（全ての項目が必須です！）</h3>
       <br>
       <div>
-        <%= f.label :name, :Name, class: "fukidashi" %><br>
+        <%= f.label :name, :サイファー名, class: "fukidashi" %><br>
         <br>
         <%= f.text_field :name, placeholder: "サイファー名", class: "form-control" %>
       </div>
       <br>
       <div>
-        <%= f.label :detail, :Detail, class: "fukidashi" %><br>
+        <%= f.label :detail, :サイファーの紹介, class: "fukidashi" %><br>
         <br>
         <%= f.text_area :detail, placeholder: "サイファーの紹介", size: "30x10", class: "form-control" %>
       </div>
       <br>
       <div>
-        <%= f.label :place, :Place, class: "fukidashi" %><br>
+        <%= f.label :place, :開催場所, class: "fukidashi" %><br>
         <br>
         <%= f.text_field :place, placeholder: "開催場所", class: "form-control" %>
       </div>
@@ -26,16 +26,21 @@
         <%= f.text_field :date_time, placeholder: "開催日時", class: "form-control" %>
       </div>
       <br>
+
+      <div>
+        <%= f.label :address, :具体的な住所（可能な範囲で）, class: "fukidashi" %><br>
+        <br>
+      <%= f.fields_for :locations do |b| %>
+        <%= b.text_field :address, placeholder: "住所", class: "form-control" %>
+        <% end %>
+      </div>
+      <br>
       <div class="field">
         <label class="fukidashi">プロフィール写真</label><br>
         <br>
           <%= f.file_field :avatar %>
       </div>
       <br>
-
-      <%= f.fields_for :locations do |b| %>
-        <%= b.text_field :address, placeholder: "住所", class: "form-control" %>
-        <% end %>
 
       <center><%= f.submit "送信", class: "button button2" %></center>
     <% end %>

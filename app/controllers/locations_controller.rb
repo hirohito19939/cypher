@@ -7,6 +7,11 @@ class LocationsController < ApplicationController
     @locations = Location.all
   end
 
+  def search
+    # 検索フォームのキーワードをあいまい検索して、productsテーブルから20件の作品情報を取得する
+    @locations = Location.where('address LIKE(?)', "%#{params[:keyword]}%").limit(20)
+  end
+
   # GET /locations/1
   # GET /locations/1.json
   def show

@@ -54,6 +54,7 @@
 
   <div class="comment-block">
     <p class="fukidashi">コメント一覧</p>
+    <br>
   <% @comments.each do |comment| %>
   <p class="each-comment">
     <a href="/users/<%= comment.user.id %>"><%= comment.user.mc_name %></a> 投稿日時:<%= comment.created_at %><br>
@@ -61,3 +62,5 @@
   </p>
   <% end %>
   </div>
+  <br>
+  <br>

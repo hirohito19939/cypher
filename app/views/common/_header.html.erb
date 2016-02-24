@@ -3,7 +3,7 @@
   <%= link_to root_path, :class => 'navbar-brand' do %>
         <%= image_tag 'warap.jpg' %>
       <% end %>
-    <div class="nav-menu">
+    <div class="nav-menu clearfix">
     <% if user_signed_in? %>
     <%= link_to 'サインアウト', "/users/sign_out", method: :delete %>
     <%= link_to 'マイページ', user_path(current_user) %>

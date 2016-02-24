@@ -54,3 +54,8 @@ end
   gem 'bootstrap-material-design', '0.1.4'
   gem "gmaps4rails"
 gem "geocoder"
+gem 'rmagick'
+
+group :production, :staging do
+  gem 'rails_12factor'
+end

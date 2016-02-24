@@ -15,7 +15,7 @@
  */
 
 .heading{
-  background-color:;
+  background-color:white;
   box-shadow: 1px 1px 1px 1px #666666;
   margin-bottom: 15px;
 }
@@ -116,7 +116,6 @@ h1{
 }
 
 .nav-menu{
-  float:right;
 }
 
 .clearfix:after {
@@ -463,12 +462,18 @@ a{
 
 /*ナビゲーションバー*/
 .nav-menu a {
-  background-color: red;
-  border: 2px solid white;
-  color: #fff;
-  line-height: 0px;
+  margin-bottom:15px;
+  background-color: white;
+  box-shadow: 1px 1px 1px 1px #666666;
+  border: 2px solid #f0f0f0;
+  color: black;
+  line-height: ;
   padding: 1px 1px 1px 1px;
   text-decoration: none;
+  float: right;
+  margin-right:5px;
+  font-style: bold;
+  width: 100px;
 }
 .nav-menu a:hover {
   background-color: #fff;
@@ -483,4 +488,122 @@ a{
 .toukou-block{
   border-top:;
   border-bottom: 5px inset black;
+}
+
+.search-form{
+  margin-bottom:10px;
+  width:;
+  height: ;
+  border-color: black;
+  box-shadow: 1px 1px 1px 1px #666666;
+  background-color: #f2f4f8;;
+  margin-bottom: 15px;
+  padding:;
+}
+
+.search-form input{
+    margin-top:10px;
+  padding: 1em;
+  border: 3px solid #ccc;
+  border-radius: 3em .7em 2em .7em/.7em 2em .7em 3em;
+  box-shadow: 0.5px 0.5px 0.5px 0.5px #666666;
+  background-color: white;
+  width: 30%;
+  margin: 0 auto;
+  margin-bottom: 5px;
+}
+
+.search-form button{
+    margin-top:10px;
+  padding: 1em;
+  border: 3px solid #ccc;
+  border-radius: 3em .7em 2em .7em/.7em 2em .7em 3em;
+  box-shadow: 0.5px 0.5px 0.5px 0.5px #666666;
+  background-color: white;
+  width: 20%;
+  margin: 0 auto;
+  margin-bottom: 5px;
+}
+
+.search-fukidashi {
+  position: relative;
+  padding: .5em .75em;
+  background-color: #f6f6f6;
+  width: 50%;
+  margin-bottom:15px;
+}
+
+.search-fukidashi {
+  position: relative;
+  padding: .5em .75em;
+  background-color: #f0f0f0;
+  border-radius: 6px;
+  box-shadow: 7px 7px 7px 7px #666666;
+}
+.search-fukidashi::after {
+  position: absolute;
+  top: 100%;
+  left: 30px;
+  content: '';
+  width: 0;
+  height: 0;
+  border: 10px solid transparent;
+  border-top: 15px solid #f0f0f0;
+}
+
+.nyuuryoku{
+    padding: 1em;
+  border: 3px solid #ccc;
+  border-radius: 3em .7em 2em .7em/.7em 2em .7em 3em;
+  box-shadow: 0.5px 0.5px 0.5px 0.5px #666666;
+  background-color: white;
+}
+
+.img-box{
+  width:100%;
+  height:100%;
+}
+
+.search-form h2{
+  padding: .75em 1em;
+  border: 1px solid #ccc;
+  /*border-top: 3px solid red;*/
+  border-bottom: 5px solid white;
+  background: -webkit-linear-gradient(top, #fff 0%, #f0f0f0 100%);
+  background: linear-gradient(to bottom, #fff 0%, #f0f0f0 100%);
+  box-shadow: 0 -1px 0 rgba(255, 255, 255, 1) inset;
+}
+
+.cyfer-list h2{
+  padding: .75em 1em;
+  border: 1px solid #ccc;
+  /*border-top: 3px solid red;*/
+  border-bottom: 3px solid red;
+  background: -webkit-linear-gradient(top, #fff 0%, #f0f0f0 100%);
+  background: linear-gradient(to bottom, #fff 0%, #f0f0f0 100%);
+  box-shadow: 0 -1px 0 rgba(255, 255, 255, 1) inset;
+}
+
+.lp{
+  width:70%;
+  height: ;
+  border-color: black;
+  box-shadow: 1px 1px 1px 1px #666666;
+  background-color: #f2f4f8;;
+  margin:0 auto;
+  padding:;
+}
+
+.lp h2{
+  margin-bottom:0;
+}
+
+.lp h3 {
+  position: relative;
+  padding: .5em .75em;
+  background-color: #f6f6f6;
+}
+
+.lp p{
+  width:70%;
 }

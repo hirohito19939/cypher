@@ -1,22 +1,31 @@
-<!--   <center><h2 class="info"><span>Cypher一覧</span></h2 class="info"></center>
-  <br>
-  <hr> -->
-<br>
-<br>
+<div class="search-form">
+  <center><h2>地域名で検索する！</h2>
+<%= form_tag('/locations/search', method: :get) do %>
+                <input class="search__query" name="keyword" placeholder="作品名で検索" type="text" value=""><button title="検索" type="submit">検索</i></button></input>
+              <% end %></center>
+              </div>
+
+              <div class="aida">
+              </div>
+              
 <div class="cyfer-list">
-<ul class="col">
+  <center><h2>サイファーの一覧</h2></center>
+<ul class="col clearfix">
       <% @cyfers.each do |cyfer| %>
         <li class="cyferbox">
           <center>
-            <%= image_tag cyfer.avatar, :size => "100pxx300px" %>
+          <div class="img-box">
+            <%= image_tag cyfer.avatar(:medium) %>
+          </div>
           </center>
             <h3 class="cyfer-name">
               <span><%= cyfer.date_time %></span>
             <%= cyfer.name %>
             </h3>
-              <p><b><a class="button button1" href="/cyfers/<%= cyfer.id %>">サイファーの詳細</a></b></p>
+            <center><p><b><a class="button button1" href="/cyfers/<%= cyfer.id %>">サイファーの詳細</a></b></p></center>
             <br>
         </li>
       <% end %>
     </div>
 </ul>
+  <center><%= paginate(@cyfers) %></center>
