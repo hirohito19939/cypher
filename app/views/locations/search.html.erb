@@ -1,16 +1,18 @@
 <div class="cyfer-list">
 <% if @locations.exists? %>
-<ul class="col">
+<ul class="col clearfix">
       <% @locations.each do |location| %>
         <li class="cyferbox">
           <center>
-            <%= image_tag location.cyfer.avatar, :size => "100x300" %>
+          <div class="img-box">
+            <%= image_tag location.cyfer.avatar(:medium) %>
+          </div>
           </center>
             <h3 class="cyfer-name">
               <span><%= location.cyfer.date_time %></span>
             <%= location.cyfer.name %>
             </h3>
-              <p><b><a class="button button1" href="/cyfers/<%= location.cyfer.id %>">サイファーの詳細</a></b></p>
+            <center><p><b><a class="button button1" href="/cyfers/<%= location.cyfer.id %>">サイファーの詳細</a></b></p></center>
             <br>
         </li>
       <% end %>
