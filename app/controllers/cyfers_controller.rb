@@ -11,13 +11,8 @@ class CyfersController < ApplicationController
   end
 
   def create
-    @cyfer = Cyfer.new(create_params)
-    if @cyfer.errors.any? then
-    @cyfer.valid?
-    render :new, error: @cyfer.errors.full_messages.join(',')
-  else
-    Cyfer.create
-  end
+    Cyfer.create(create_params)
+    redirect_to :root
   end
 
   def edit
