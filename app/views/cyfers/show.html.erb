@@ -7,9 +7,13 @@
 <div class="clearfix">
   <div class="kihon-block info">
     <h3 class="fukidashi">基本情報</h3>
+    <p>主催者:<a href="/users/<%= User.find(@cyfer.shusai_id).id %>"><%= User.find(@cyfer.shusai_id).mc_name %></a>
     <p>開催場所:<b><%= @cyfer.place %></b><br>
     <a href="/maps/<%= @cyfer.locations.first.id %>">地図を見る</a><br>
-      開催日時:<b><%= @cyfer.date_time %></b></p>
+    <br>
+    開催日時:<b><%= @cyfer.date_time %></b>
+    <br>
+    </p>
   </div>
 
   <div class="detail-block info">
@@ -25,6 +29,20 @@
   </div>
   </div>
   <br>
+
+  <div class="sanka-block">
+  <% if current_user.id == @cyfer.shusai_id %>
+    <br>
+    <center><b>【主催の方】開催終了後は<br>
+      必ずこちらでリセットしましょう▼</b><br>
+      <%= submit_tag("参加状況をリセット") %></center>
+    <center><a class="button button1" href="/cyfers/<%= @cyfer.id %>/edit">サイファー情報更新</a></center>
+    <center><%= form_tag(key_reset_path(params[:id]), method: :delete) do %>
+    <br>
+  <% end %>
+      <% else %>
+      <% end %>
+    </div>
 
 <div class="sanka-block">
 <center>

@@ -5,13 +5,19 @@ class KeysController < ApplicationController
 
   def create
   Key.create(create_params)
-  redirect_to :root
+  redirect_to :back
   end
 
   def destroy
   @key = Key.where(cyfer_id: params[:id], user_id: current_user.id)
   @key.first.destroy
-  redirect_to "/cyfers/#{params[:id]}"
+  redirect_to :back
+  end
+
+  def reset
+    @key = Key.where(cyfer_id: params[:key_id])
+    @key.destroy_all
+    redirect_to :back
   end
 
   private

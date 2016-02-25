@@ -12,6 +12,9 @@ Rails.application.routes.draw do
    :destroy]
  end
   resources :keys, only: [:new, :create, :destroy]
+  resources :keys do
+  delete 'reset'
+end
   root 'cyfers#index'
 end
   # The priority is based upon order of creation: first created -> highest priority.

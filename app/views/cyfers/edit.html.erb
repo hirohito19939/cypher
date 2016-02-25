@@ -1,20 +1,6 @@
-  <% binding.pry %>
-<% if @cyfer.errors.any? %>
-
-  <div id="error_explanation">
-    <h2><%= @cyfer.errors.count %>件のエラーがあります。</h2>
- 
-    <ul>
-    <% @cyfer.errors.full_messages.each do |msg| %>
-      <li><%= msg %></li>
-    <% end %>
-    </ul>
-  </div>
-<% end %>
-
 <div class="touroku-form lp">
-<%= form_for [@cyfer] do |f| %>
-      <h3>サイファーを登録（全ての項目が必須です！）</h3>
+<%= form_for @cyfer do |f| %>
+      <h3>サイファー情報変更（全ての項目が必須です！）</h3>
       <br>
       <div>
         <%= f.label :name, :サイファー名, class: "fukidashi" %><br>
@@ -48,7 +34,7 @@
         <%= b.text_field :address, placeholder: "住所", class: "form-control" %>
         <% end %>
       </div>
-      <br>
+
       <div class="field">
         <label class="fukidashi">プロフィール写真</label><br>
         <br>

@@ -1,9 +1,6 @@
 <header>
-  <div class="heading clearfix">
-  <%= link_to root_path, :class => 'navbar-brand' do %>
-        <%= image_tag 'warap.jpg' %>
-      <% end %>
-    <div class="nav-menu clearfix">
+  <div class="heading">
+  <div class="nav-menu">
     <% if user_signed_in? %>
     <%= link_to 'サインアウト', "/users/sign_out", method: :delete %>
     <%= link_to 'マイページ', user_path(current_user) %>
@@ -13,5 +10,8 @@
     <%= link_to '新規登録', new_user_registration_path %>
     <% end %>
     </div>
+  <%= link_to root_path, :class => 'navbar-brand' do %>
+        <%= image_tag 'warap.jpg' %>
+      <% end %>
   </div>
 </header>

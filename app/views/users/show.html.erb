@@ -22,6 +22,16 @@
     <br>
   </div>
 
+  <% if Cyfer.find_by(shusai_id: @user.id) %>
+  <div class="block">
+    <h3 class="fukidashi">主催サイファー</h3>
+    <p>
+    <a href="/cyfers/<%= Cyfer.find_by(shusai_id: @user.id).id %>"><%= Cyfer.find_by(shusai_id: @user.id).name %></a><br>
+  </p>
+  </div>
+  <% else %>
+  <% end %>
+
   <div class="block">
     <h3 class="fukidashi">参加予定サイファー</h3>
     <p>
