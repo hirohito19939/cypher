@@ -45,6 +45,10 @@ img{
   background-color: #f2f4f8;;
 }
 
+.cyfer-list ul li{
+  /*box-shadow: 7px 7px 7px 7px #666666;*/
+}
+
 @media screen and (min-width:760px) {
 
 .kihon-block{
@@ -77,11 +81,10 @@ img{
   box-shadow: 3px 3px 3px 3px #666666;
 }
 
-ul .col li {
-  width: 30%;
+.col li {
+  width: 30%;}
 }
 }
-
 
 /*以下、レスポンシブ以外のcssコード*/
 /*以下、レスポンシブ以外のcssコード*/
@@ -102,6 +105,9 @@ ul .col li {
 
 h1{
   margin-bottom: 0px;
+}
+
+.nav-menu{
 }
 
 .clearfix:after {
@@ -129,6 +135,10 @@ h3{
 a{
   margin: 0;
 }
+
+/*p{
+  margin: 0;
+}*/
 
 .center{
   margin:auto 0;
@@ -454,8 +464,7 @@ a{
   float: right;
   margin-right:5px;
   font-style: bold;
-  min-width:100px;
-  width: 15%;
+  width: 100px;
 }
 .nav-menu a:hover {
   background-color: #fff;
