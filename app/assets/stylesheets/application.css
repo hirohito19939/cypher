@@ -80,6 +80,7 @@ img{
 ul .col li {
   width: 30%;
 }
+}
 
 
 /*以下、レスポンシブ以外のcssコード*/
@@ -101,9 +102,6 @@ ul .col li {
 
 h1{
   margin-bottom: 0px;
-}
-
-.nav-menu{
 }
 
 .clearfix:after {
@@ -131,10 +129,6 @@ h3{
 a{
   margin: 0;
 }
-
-/*p{
-  margin: 0;
-}*/
 
 .center{
   margin:auto 0;
