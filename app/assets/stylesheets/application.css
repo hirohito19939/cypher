@@ -84,7 +84,6 @@ img{
 .col li {
   width: 30%;}
 }
-}
 
 /*以下、レスポンシブ以外のcssコード*/
 /*以下、レスポンシブ以外のcssコード*/
@@ -136,10 +135,6 @@ a{
   margin: 0;
 }
 
-/*p{
-  margin: 0;
-}*/
-
 .center{
   margin:auto 0;
 }
@@ -150,7 +145,6 @@ a{
   border-radius: 3em .7em 2em .7em/.7em 2em .7em 3em;
   box-shadow: 0.5px 0.5px 0.5px 0.5px #666666;
   background-color: white;
-  height: ;
 }
 
 .fukidashi {
