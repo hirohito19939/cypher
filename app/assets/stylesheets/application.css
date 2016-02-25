@@ -22,7 +22,6 @@
 
 .cyferbox{
   width: 95%;
-  height:;
   margin-right: auto;
   margin-left: auto;
   margin-bottom: 50px;
@@ -41,17 +40,9 @@ img{
 }
 
 .box{
-  width:;
-  height: ;
   border-color: black;
   box-shadow: 1px 1px 1px 1px #666666;
   background-color: #f2f4f8;;
-  margin:;
-  padding:;
-}
-
-.cyfer-list ul li{
-  /*box-shadow: 7px 7px 7px 7px #666666;*/
 }
 
 @media screen and (min-width:760px) {
@@ -75,7 +66,6 @@ img{
 .cyfer-list ul{
   margin-left:-20px;
   overflow:hidden;
-  background-color:;
 }
 
 .cyfer-list ul li{
@@ -87,10 +77,10 @@ img{
   box-shadow: 3px 3px 3px 3px #666666;
 }
 
-ul.col li {
-  width: 30%;}
+ul .col li {
+  width: 30%;
 }
-}
+
 
 /*以下、レスポンシブ以外のcssコード*/
 /*以下、レスポンシブ以外のcssコード*/
@@ -98,12 +88,10 @@ ul.col li {
 
 .box{
   width: 95%;
-  height: ;
   border-color: black;
   box-shadow: 7px 7px 7px 7px #666666;
   background-color: #f2f4f8;;
   margin: 0 auto;
-  padding:;
 }
 
 .title{
@@ -467,7 +455,6 @@ a{
   box-shadow: 1px 1px 1px 1px #666666;
   border: 2px solid #f0f0f0;
   color: black;
-  line-height: ;
   padding: 1px 1px 1px 1px;
   text-decoration: none;
   float: right;
@@ -487,19 +474,15 @@ a{
 }
 
 .toukou-block{
-  border-top:;
   border-bottom: 5px inset black;
 }
 
 .search-form{
   margin-bottom:10px;
-  width:;
-  height: ;
   border-color: black;
   box-shadow: 1px 1px 1px 1px #666666;
   background-color: #f2f4f8;;
   margin-bottom: 15px;
-  padding:;
 }
 
 .search-form input{
@@ -587,12 +570,10 @@ a{
 
 .lp{
   width:70%;
-  height: ;
   border-color: black;
   box-shadow: 1px 1px 1px 1px #666666;
   background-color: #f2f4f8;;
   margin:0 auto;
-  padding:;
 }
 
 .lp h2{
