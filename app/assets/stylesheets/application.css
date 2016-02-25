@@ -49,7 +49,7 @@ img{
   /*box-shadow: 7px 7px 7px 7px #666666;*/
 }
 
-@media all and (min-width:760px) {
+@media screen and (min-width:760px) {
 
 .kihon-block{
   width:30%;
